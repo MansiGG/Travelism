@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <link href="temo.css" rel="stylesheet" />
+    <script>
+        $('.dropdown-button').dropdown({
+            inDuration: 300,
+            outDuration: 225,
+            constrainWidth: false, // Does not change width of dropdown to that of the activator
+            hover: true, // Activate on hover
+            gutter: 0, // Spacing from edge
+            belowOrigin: false, // Displays dropdown below the button
+            alignment: 'left', // Displays dropdown with edge aligned to the left of button
+            stopPropagation: false, // Stops event propagation
+        }
+        );
+    </script>
+    <script src="navshrink.js"></script>
+    <style type="text/css">
+        .ImageMap {
+            height: 561px;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <header style="height:00px">
+          
+         
+            <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" >
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="Home.aspx">Brand</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="Home.aspx">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Explore</a>
+
+              <ul id='dropdown1' class='dropdown-content scrollable-menu'>
+                      <li> <a href="andhra.aspx">Andhra Pradesh</a></li>
+                                       <li><a href="arunachal.aspx">Arunachal Pradesh</a></li>
+                                       <li><a href="assam.aspx">Assam</a></li>
+                                       <li><a href="bihar.aspx">Bihar</a></li>
+                                       <li><a href="chhatisgarh.aspx">chhatisgarh</a></li>
+                                       <li>   <a href="goa.aspx">Goa</a></li>
+                                       <li>   <a href="gujarat.aspx">Gujarat</a></li>
+                                       <li>   <a href="harayana.aspx">Harayana</a></li>
+                                       <li>   <a href="himachal.aspx">Himachal Pradesh</a></li>
+                                       <li>   <a href="jammu.aspx">Jammu and Kashmir</a></li>
+                                       <li>   <a href="jharkhand.aspx">Jharkhand</a></li>
+                                       <li>   <a href="karnatak.aspx">Karnataka</a></li>
+                                       <li>   <a href="kerala.aspx">Kerala</a></li>
+                                       <li>   <a href="madhyap.aspx">madhya Pradesh</a></li>
+                                       <li>   <a href="#">Maharashtra</a></li>
+                                       <li>   <a href="#">Manipur</a></li>
+                                       <li>   <a href="#">Meghalaya</a></li>
+                                       <li>   <a href="#">Mizoram</a></li>
+                                       <li>   <a href="#">Nagaland</a></li>
+                                       <li>   <a href="#">Odisha</a></li>
+                                       <li>   <a href="#">Punjab</a></li>
+                                       <li>   <a href="#">Rajasthan</a></li>
+                                       <li>   <a href="#">Sikkim</a></li>
+                                       <li>   <a href="#">Tamilnadu</a></li>
+                                       <li>   <a href="#">Telangana</a></li>
+                                       <li>   <a href="#">Tripura</a></li>
+                                       <li>   <a href="#">uttarakhand</a></li>
+                                       <li>   <a href="#">Uttar Pradesh</a></li>
+                                       <li>   <a href="#">West Bengal</a></li>
+                
+                                 </ul>
+                            </li>
+                              <li><a href="#">Guide</a></li>
+                              <li><a href="#">Contact Us</a></li>
+                              <li><a href="#">About Us</a></li>
+                              <li class="input-group">
+                                <input type="text"  id="SearchBox" placeholder="Search for..."/>
+                                  <button class="btn btn-default " id="SearchBtn" type="button">
+                                      <span class="glyphicon glyphicon-search" ></span></button>
+                              </li>
+                      <li><a href="#">Sign In</a></li>
+                              <li><a href="UserRegistration.aspx">Sign Up</a></li>
+                              
+                        </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+
+
+        </nav>
+                     </header>
+        </div>
+
+      
+    
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <nav class="month">
+            <p><center>Best Places To Visit By Month</center></p>    
+            
+             <ul>
+           
+           <li><asp:Button ID="Button1" runat="server" Text="January" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF" /></li>
+           <li><asp:Button ID="Button2" runat="server" Text="February" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF"/></li>
+           <li><asp:Button ID="Button3" runat="server" Text="March" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF"/></li>
+           <li><asp:Button ID="Button4" runat="server" Text="April" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF"/></li>
+           <li><asp:Button ID="Button5" runat="server" Text="May" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF"/></li>
+           <li><asp:Button ID="Button6" runat="server" Text="June" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF"/></li>
+           <li><asp:Button ID="Button7" runat="server" Text="July" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF" /></li>
+           <li><asp:Button ID="Button8" runat="server" Text="August" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF"/></li>
+           <li><asp:Button ID="Button9" runat="server" Text="September" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF" /></li>
+           <li><asp:Button ID="Button10" runat="server" Text="October" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF" /></li>
+           <li><asp:Button ID="Button11" runat="server" Text="November" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF" /></li>
+            <li><asp:Button ID="Button12" runat="server" Text="December" BorderStyle="Solid" BorderColor="Black" Font-Bold="True" Font-Size="Medium" ForeColor="#33CCFF" /></li>
+         
+           </ul>
+   </nav>
+
+            <footer>
+    <section class="footc">
+            <h4> Powered By-
+        Browser Directory Formation(BDF) Infotech LLP</h4> 
+    </section>
+        
+    <section class="footc">
+            <ul class="social">
+				<li><a href="#"><img src="https://www.w3newbie.com/wp-content/uploads/facebook1.png"/></a></li>
+				<li><a href="#"><img src="https://www.w3newbie.com/wp-content/uploads/youtube1.png"/></a></li>
+				<li><a href="#"><img src="https://www.w3newbie.com/wp-content/uploads/googleplus.png"/></a></li>
+			</ul>
+    </section>
+        
+    <section class="footc">
+            <h4>Designed By-<br>
+                  Saurabh Pujare
+                  Mansi Gupta
+                        </h4>
+    </section>
+    </footer>
+    
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+    </form>
+</body>
+</html>

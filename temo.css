@@ -1,0 +1,168 @@
+﻿body {
+}
+.first {
+    background-image: url(HeaderImg2.jpeg);
+    background-size: cover;
+    background-attachment: scroll;
+    height: 100%;
+    margin: 0;
+}
+
+.navbar {
+    opacity: 0.4;
+}
+
+.nav {
+    margin-left: 25%;
+    color: white;
+}
+
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0 50px 0 50px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+nav.shrink {
+    background-color: black;
+    height: 60px;
+    padding-top: 0px;
+    color: white;
+}
+
+.ntext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+}
+
+.input-group {
+    padding: 0 20px 0 50px;
+    margin-top: 10px;
+}
+
+
+.hello {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 1em;
+}
+
+    .hello > div {
+        background: #eee;
+        padding: 1em;
+    }
+
+        .hello > div:nth-child(odd) {
+            background: #ddd;
+        }
+
+nav.month {
+    background-color: lightblue;
+    padding: 10px 10px 50px 80px;
+    width: 100%;
+    height: auto;
+}
+
+    nav.month ul li {
+        display: block;
+        margin-left: 20px;
+        float: left;
+        background-color: orange;
+        font: black;
+        opacity: 0.9
+    }
+
+        nav.month ul li:hover {
+            background-color: aliceblue;
+            color: black;
+        }
+
+img {
+    height: 500px;
+    width: auto;
+}
+
+.footc {
+    float: left;
+    width: 29%;
+    margin: .8% .8%;
+    text-align: center;
+}
+
+footer {
+    height: 80px;
+    background-color: #173E43;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0.90;
+}
+
+.footc h4 {
+    color: white;
+}
+
+ul.social li {
+    display: inline;
+}
+
+    ul.social li img {
+        height: 50px;
+    }
+
+.tiles {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1em;
+    height: 100px;
+    width: 100px;
+}
+
+    .tiles div {
+        padding: 1em;
+    }
+
+.carousel-inner {
+    margin-left: 18%;
+}
