@@ -56,8 +56,8 @@
                     <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
                       <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Explore</a>
-
-              <ul id='dropdown1' class='dropdown-content scrollable-menu'>
+                        
+                        <ul id='dropdown1' class='dropdown-content scrollable-menu'>
                       <li> <a href="andhra.aspx">Andhra Pradesh</a></li>
                                        <li><a href="arunachal.aspx">Arunachal Pradesh</a></li>
                                        <li><a href="assam.aspx">Assam</a></li>
@@ -71,22 +71,22 @@
                                        <li>   <a href="jharkhand.aspx">Jharkhand</a></li>
                                        <li>   <a href="karnatak.aspx">Karnataka</a></li>
                                        <li>   <a href="kerala.aspx">Kerala</a></li>
-                                       <li>   <a href="#=madhyap.aspx">madhya Pradesh</a></li>
-                                       <li>   <a href="#">Maharashtra</a></li>
-                                       <li>   <a href="#">Manipur</a></li>
-                                       <li>   <a href="#">Meghalaya</a></li>
-                                       <li>   <a href="#">Mizoram</a></li>
-                                       <li>   <a href="#">Nagaland</a></li>
-                                       <li>   <a href="#">Odisha</a></li>
-                                       <li>   <a href="#">Punjab</a></li>
-                                       <li>   <a href="#">Rajasthan</a></li>
-                                       <li>   <a href="#">Sikkim</a></li>
-                                       <li>   <a href="#">Tamilnadu</a></li>
-                                       <li>   <a href="#">Telangana</a></li>
-                                       <li>   <a href="#">Tripura</a></li>
-                                       <li>   <a href="#">uttarakhand</a></li>
-                                       <li>   <a href="#">Uttar Pradesh</a></li>
-                                       <li>   <a href="#">West Bengal</a></li>
+                                       <li>   <a href="madhyap.aspx">madhya Pradesh</a></li>
+                                       <li>   <a href="maharshtra.aspx">Maharashtra</a></li>
+                                       <li>   <a href="manipur.aspx">Manipur</a></li>
+                                       <li>   <a href="meghalaya.aspx">Meghalaya</a></li>
+                                       <li>   <a href="mizoram.aspx">Mizoram</a></li>
+                                       <li>   <a href="nagaland.aspx">Nagaland</a></li>
+                                       <li>   <a href="odisha.aspx">Odisha</a></li>
+                                       <li>   <a href="punjab.aspx">Punjab</a></li>
+                                       <li>   <a href="rajsthan.aspx">Rajasthan</a></li>
+                                       <li>   <a href="sikkim.aspx">Sikkim</a></li>
+                                       <li>   <a href="tamilnadu.aspx">Tamilnadu</a></li>
+                                       <li>   <a href="telangana.aspx">Telangana</a></li>
+                                       <li>   <a href="tripura.aspx">Tripura</a></li>
+                                       <li>   <a href="uttarakhand.aspx">uttarakhand</a></li>
+                                       <li>   <a href="up.aspx">Uttar Pradesh</a></li>
+                                       <li>   <a href="westbengal.aspx">West Bengal</a></li>
                 
                                  </ul>
                             </li>
