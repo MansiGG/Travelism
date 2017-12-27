@@ -57,41 +57,17 @@
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="Home.aspx">Home <span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
-                      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Explore</a>
+                      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Explore
 
-              <ul id='dropdown1' class='dropdown-content scrollable-menu'>
-                      <li> <a href="andhra.aspx">Andhra Pradesh</a></li>
-                                       <li><a href="arunachal.aspx">Arunachal Pradesh</a></li>
-                                       <li><a href="assam.aspx">Assam</a></li>
-                                       <li><a href="bihar.aspx">Bihar</a></li>
-                                       <li><a href="chhatisgarh.aspx">chhatisgarh</a></li>
-                                       <li>   <a href="goa.aspx">Goa</a></li>
-                                       <li>   <a href="gujarat.aspx">Gujarat</a></li>
-                                       <li>   <a href="harayana.aspx">Harayana</a></li>
-                                       <li>   <a href="himachal.aspx">Himachal Pradesh</a></li>
-                                       <li>   <a href="jammu.aspx">Jammu and Kashmir</a></li>
-                                       <li>   <a href="jharkhand.aspx">Jharkhand</a></li>
-                                       <li>   <a href="karnatak.aspx">Karnataka</a></li>
-                                       <li>   <a href="kerala.aspx">Kerala</a></li>
-                                       <li>   <a href="madhyap.aspx">madhya Pradesh</a></li>
-                                       <li>   <a href="maharshtra.aspx">Maharashtra</a></li>
-                                       <li>   <a href="manipur.aspx">Manipur</a></li>
-                                       <li>   <a href="meghalaya.aspx">Meghalaya</a></li>
-                                       <li>   <a href="mizoram.aspx">Mizoram</a></li>
-                                       <li>   <a href="nagaland.aspx">Nagaland</a></li>
-                                       <li>   <a href="odisha.aspx">Odisha</a></li>
-                                       <li>   <a href="punjab.aspx">Punjab</a></li>
-                                       <li>   <a href="rajsthan.aspx">Rajasthan</a></li>
-                                       <li>   <a href="sikkim.aspx">Sikkim</a></li>
-                                       <li>   <a href="tamilnadu.aspx">Tamilnadu</a></li>
-                                       <li>   <a href="telangana.aspx">Telangana</a></li>
-                                       <li>   <a href="tripura.aspx">Tripura</a></li>
-                                       <li>   <a href="uttarakhand.aspx">uttarakhand</a></li>
-                                       <li>   <a href="up.aspx">Uttar Pradesh</a></li>
-                                       <li>   <a href="westbengal.aspx">West Bengal</a></li>
-                
-                                 </ul>
-                            </li>
+              <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="head" DataValueField="head" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"
+                              >
+                              <asp:ListItem Value="andhra.aspx"></asp:ListItem>
+                              <asp:ListItem Value="arunachal.aspx"></asp:ListItem>
+                    </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StateConnection %>" SelectCommand="SELECT [head] FROM [State] ORDER BY [head]"></asp:SqlDataSource>
+                      </a>
+                          </li>
+                      
                               <li><a href="#">Guide</a></li>
                               <li><a href="#">Contact Us</a></li>
                               <li><a href="#">About Us</a></li>
@@ -117,6 +93,10 @@
          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
 
+
+
+        <asp:Label ID="lblOuput" runat="server" Text="Label"></asp:Label>
+
         <nav class="month">
             <p><center>Best Places To Visit By Month</center></p>    
             
@@ -137,6 +117,7 @@
          
            </ul>
    </nav>
+
 
             <footer>
     <section class="footc">
