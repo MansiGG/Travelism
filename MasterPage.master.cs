@@ -15,6 +15,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
     protected void Page_Load(object sender, EventArgs e)
     {
         FillPage();
+
+        if (!IsPostBack)
+        {
+            BindImageRepeater();
+        }
     }
 
     private void FillPage()
@@ -101,34 +106,52 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        //switch (DropDownList1.SelectedValue.ToString())
+        switch (DropDownList1.SelectedValue.ToString())
+        {
+            case "Andhra Pradesh":
+                Response.Redirect("andhra.aspx");
+                FillPage();
+                break;
+            case "Arunachal Pradesh":
+                Response.Redirect("arunachal.aspx");
+                FillPage();
+                break;
+
+        }
+
+
+        //if (DropDownList1.SelectedValue.ToString() == "Andhra Pradesh")
         //{
-        //    case "Andhra Pradesh":
-        //        Response.Redirect("andhra.aspx");
-        //        FillPage();
-        //        break;
-        //    case "Arunachal Pradesh":
-        //        Response.Redirect("arunachal.aspx");
-        //        FillPage();
-        //        break;
-
+        //    Response.Redirect("andhra.aspx");
+        //    FillPage();
         //}
-
-
-        if (DropDownList1.SelectedValue.ToString()=="Andhra Pradesh")
-        {
-            Response.Redirect("andhra.aspx");
-            FillPage();
-        }
-        if (DropDownList1.SelectedValue.ToString() == "Arunachal Pradesh")
-        {
-            Response.Redirect("arunachal.aspx");
-            FillPage();
-        }
+        //if (DropDownList1.SelectedValue.ToString() == "Arunachal Pradesh")
+        //{
+        //    Response.Redirect("arunachal.aspx");
+        //    FillPage();
+        //}
 
     }
 
+    private void BindImageRepeater()
+    {
+        string cs = ConfigurationManager.ConnectionStrings["StateConnection"].ConnectionString;
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            SqlCommand cmd = new SqlCommand("SELECT [Name],[Extension] FROM StateImage", con);
+            con.Open();
+            using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+            {
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                rptrImages.DataSource = dt;
+                rptrImages.DataBind();
 
+            }
+
+        }
+    }
+    
 
 }
 
